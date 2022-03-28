@@ -16,7 +16,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://ifzarasool.github.io/To-Do-List/)
+[Live Demo Link](https://ifzarasool.github.io/Daily-Task-List/)
 
 ## Getting Started
 
