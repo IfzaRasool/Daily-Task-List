@@ -1,7 +1,7 @@
 /* eslint-disable import/named */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-unused-vars */
-import _, { isEmpty, remove } from 'lodash';
+import _, { isEmpty } from 'lodash';
 import './style.css';
 import Addtasks from './AddTask.js';
 import removetasks from './RemoveTask.js';
@@ -35,13 +35,8 @@ const displaytask = (taskDes) => {
 };
 displaytask(taskDes);
 
-taskField.addEventListener('keyup', (e) => {
-  e.stopImmediatePropagation();
-  if (isEmpty(taskDes)) {
-    Addtasks(e.target.value);
-    e.target.value = '';
-    displaytask(taskDes);
-  } else if (e.keyCode === 13 || e.keyCode === 16 || e.keyName === 'Enter') {
+taskField.addEventListener('keydown', (e) => {
+  if (e.code === 'Enter') {
     if (!isEmpty(taskField.value)) {
       Addtasks(e.target.value);
       e.target.value = '';
